@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "NumClass.h"
 
 int isPrime(int num) {
     if(num < 1){return 0;}

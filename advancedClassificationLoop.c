@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "NumClass.h"
 int power(int n,int m){
     int pow=1;
     for (int i = 1; i <=m ; i++) {
