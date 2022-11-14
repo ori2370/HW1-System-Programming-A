@@ -1,20 +1,6 @@
 #include <stdio.h>
 #include "NumClass.h"
-int power(int n,int m){
-    int pow=1;
-    for (int i = 1; i <=m ; i++) {
-        pow*=n;
-    }
-    return pow;
-}
-int sumOfDigits(int n){
-    int sum=0,tmp=n;
-    do {
-        tmp/=10;
-        sum++;
-    } while (tmp>0);
-    return sum;
-}
+
 int isArmstrong(int n){
     int sum=0,digits=n;
     do {
@@ -39,4 +25,19 @@ int isPalindrome(int n) {
     }
     return 1;
 }
-
+//subfunctions that help with the main functions
+int power(int n,int m){
+    int pow=1;
+    for (int i = 1; i <=m ; i++) {
+        pow*=n;
+    }
+    return pow;
+}
+int sumOfDigits(int n){
+    int sum=0,tmp=n;
+    do {
+        tmp/=10;
+        sum++;
+    } while (tmp>0);
+    return sum;
+}
