@@ -1,9 +1,28 @@
 #include <stdio.h>
 #include "NumClass.h"
+#ifndef LOOP
 
+//subfunctions that help with the main functions
+int powerR(int n,int m){
+    int pow=1;
+    for (int i = 1; i <=m ; i++) {
+        pow*=n;
+    }
+    return pow;
+}
+int sumOfDigitsR(int n){
+    int sum=0,tmp=n;
+    do {
+        tmp/=10;
+        sum++;
+    } while (tmp>0);
+    return sum;
+}
+
+//functions
 int isPalindrome2(int n, int first,int last, int a) {
     if(n < 1){return 1;}
-    a = power(10, sumOfDigits(n)-1);
+    a = powerR(10, sumOfDigitsR(n)-1);
     first = n % 10;
     last = n / a;
     if (first != last){
@@ -19,13 +38,13 @@ int isPalindrome(int n) {
 
 int isArmstrong2(int n,int m){
     if(n<1)return 0;
-    int sum= power(n%10,m);
+    int sum= powerR(n%10,m);
     return sum+isArmstrong2(n/10,m);
 }
 int isArmstrong(int n) {
-    if(isArmstrong2(n, sumOfDigits(n)) ==n) return 1;
+    if(isArmstrong2(n, sumOfDigitsR(n)) ==n) return 1;
     return 0;
 }
-
+#endif
 
 
