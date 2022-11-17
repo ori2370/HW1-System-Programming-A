@@ -29,7 +29,7 @@ int isPalindrome2(int n, int first, int last, int afterfirst , int a) {
     if (first != last){
         return 0;
     }
-    if (n/(a/10) == last*10){
+    if (n >= 10 && n/(a/10) == last*10){
         if(afterfirst == 0){
             return isPalindrome2( ((n%a)-first)/10 + a/100 + 1, 0,0,0,0)*1;
             b = 0;
