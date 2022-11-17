@@ -13,7 +13,7 @@ int main(){
     printf("The Armstrong numbers are: ");
     for(int i=first;i<=second;i++){
         if(isArmstrong(i)) {
-            printf("%d " ,i);
+            printf("%d ",i);
         }
     }
     printf("\n");
@@ -37,6 +37,5 @@ int main(){
             printf("%d " ,i);
         }
     }
-    printf("\n");
     return 0;
 }
