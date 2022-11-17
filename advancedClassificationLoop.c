@@ -1,7 +1,6 @@
 #include "NumClass.h"
 #include <stdio.h>
 
-
 //subfunctions that help with the main functions
 int powerL(int n,int m){
     int pow=1;

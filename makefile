@@ -51,4 +51,4 @@ main.o: main.c NumClass.h
 	gcc $(CFLAGS) -c main.c
 #Clean
 clean:
-	rm -f *.o *so *a all
+	rm -f *.o *so *a mains maindloop maindrec 
