@@ -39,7 +39,7 @@ int isPalindrome(int n) {
         afterfirst = ((num % 100)/10);
         last = num / a;
         if (first != last){return 0;}
-        if (num / (a/10) == last*10){
+        if (num >= 10 && num / (a/10) == last*10){
             if(afterfirst == 0){
                 num=((num%a)-first)/10 + a/100 + 1;
                 b = 0;
