@@ -19,19 +19,29 @@ int sumOfDigitsR(int n){
 }
 
 //functions
-int isPalindrome2(int n, int first,int last, int a) {
+int isPalindrome2(int n, int first, int last, int afterfirst , int a) {
     if(n < 1){return 1;}
     a = powerR(10, sumOfDigitsR(n)-1);
     first = n % 10;
+    afterfirst = ((n % 100)/10);
     last = n / a;
+    int b = 1;
     if (first != last){
-        return isPalindrome2( ((n%a)-first)/10, 0,0,0) * 0;
+        return 0;
     }
-    return isPalindrome2( ((n%a)-first)/10, 0,0,0)*1;
+    if (n/(a/10) == last*10){
+        if(afterfirst == 0){
+            return isPalindrome2( ((n%a)-first)/10 + a/100 + 1, 0,0,0,0)*1;
+            b = 0;
+        }else{
+            return 0;
+        }
+    }
+    if(b){return isPalindrome2( ((n%a)-first)/10, 0,0,0,0)*1;}
 }
 
 int isPalindrome(int n) {
-    return isPalindrome2(n, 0, 0, 0);
+    return isPalindrome2(n, 0, 0, 0, 0);
 }
 
 
