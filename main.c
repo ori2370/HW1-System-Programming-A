@@ -1,14 +1,14 @@
-#include <stdio.h>
 #include "NumClass.h"
+#include <stdio.h>
 
 int main(){
     int first,second;
     printf("Please enter two numbers \n");
     scanf("%d%d", &first, &second);
-    if(second<first){
+    if(second<=first){
         int tmp=first;
-        int first=second;
-        int second=tmp;
+        first=second;
+        second=tmp;
     }
     printf("The prime numbers are: ");
     for(int i=first;i<=second;i++){

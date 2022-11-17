@@ -1,6 +1,5 @@
-#include <stdio.h>
 #include "NumClass.h"
-#ifndef LOOP
+#include <stdio.h>
 
 //subfunctions that help with the main functions
 int powerR(int n,int m){
@@ -45,6 +44,5 @@ int isArmstrong(int n) {
     if(isArmstrong2(n, sumOfDigitsR(n)) ==n) return 1;
     return 0;
 }
-#endif
 
 

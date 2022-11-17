@@ -1,7 +1,6 @@
 
 #ifndef HW1_NUMCLASS_H
 #define HW1_NUMCLASS_H
-#define LOOP
 //constants
 
 //functions

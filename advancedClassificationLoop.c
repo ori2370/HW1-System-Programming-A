@@ -1,6 +1,5 @@
-#include <stdio.h>
 #include "NumClass.h"
-#ifdef LOOP
+#include <stdio.h>
 
 //subfunctions that help with the main functions
 int powerL(int n,int m){
@@ -44,4 +43,3 @@ int isPalindrome(int n) {
     }
     return 1;
 }
-#endif
