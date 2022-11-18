@@ -4,7 +4,8 @@
 
 int main(){
     int first,second;
-    scanf("%d %d", &first, &second);
+    scanf("%d",&first);
+    scanf("%d", &second);
     if(second<first){
         int tmp=first;
         first=second;
