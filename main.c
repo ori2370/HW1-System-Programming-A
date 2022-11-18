@@ -4,7 +4,7 @@
 
 int main(){
     int first,second;
-    scanf("%d%d", &first, &second);
+    scanf("%d %d", &first, &second);
     if(second<first){
         int tmp=first;
         first=second;
@@ -36,7 +36,6 @@ int main(){
         if(isStrong(i)) {
             printf("%d ",i);
         }
-    }
-    printf("\n");
+    }    
     return 0;
 }
