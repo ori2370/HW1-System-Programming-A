@@ -33,13 +33,21 @@ int isArmstrong(int n){
 int isPalindrome(int n) {
     int num = n;
     while (num > 0) {
-        int first = 0, last = 0, a;
+        int first = 0, last = 0, afterfirst, a, b = 1;
         a = powerL(10, sumOfDigitsL(num)-1);
         first = num % 10;
+        afterfirst = ((num % 100)/10);
         last = num / a;
-
-        if (first != last)return 0;
-        num=((num%a)-first)/10;
+        if (first != last){return 0;}
+        if (num >= 10 && num / (a/10) == last*10){
+            if(afterfirst == 0){
+                num=((num%a)-first)/10 + a/100 + 1;
+                b = 0;
+            }else{
+                return 0;
+            }
+        }
+        if(b){num=((num%a)-first)/10;}
     }
     return 1;
 }
