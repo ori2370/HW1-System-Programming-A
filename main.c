@@ -35,7 +35,7 @@ int main() {
     printf("The Strong numbers are:");
     for (int i = first; i <= second; i++) {
         if (isStrong(i)) {
-            printf(" %d ", i);
+            printf(" %d", i);
         }
         if (i == second) {
             printf("\n");
