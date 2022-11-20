@@ -51,6 +51,3 @@ int main(){
     }
     printf("\n");
     return 0;
-} if(i==second){
-                printf("%d",i);
-            }else
