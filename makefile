@@ -21,12 +21,12 @@ libclassrec.a: $(RECPROG)
 #Make recursived
 recursived: libclassrec.so
 libclassrec.so: $(RECPROG)
-	gcc -shared $(CFLAGS) -o libclassrec.so $(RECPROG) 
+	gcc -shared -fPIC $(CFLAGS) -o libclassrec.so $(RECPROG) 
 	
 #Make loopd
 loopd: libclassloops.so
 libclassloops.so: $(LOOPPROG)
-	gcc -shared $(CFLAGS) -o libclassloops.so $(LOOPPROG) 
+	gcc -shared -fPIC $(CFLAGS) -o libclassloops.so $(LOOPPROG) 
 
 #Make mains
 mains: main.o libclassrec.a
